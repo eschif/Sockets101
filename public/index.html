@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  </head>
+  <body>
+    <div class = "container">
+      <!-- Enter chat messages here -->
+      <div class="sub-container-chat-input">
+        <input type="text" class="chat-input-name" id="name-input" placeholder="Name" />
+        <div class="msg-bar">
+          <input type="text" class="chat-input-msg" id="msg-input" placeholder="Message" />
+        </div>
+        <button id="send-button">Send</button>
+      </div>
+
+      <!-- View chat messages here -->
+      <div class ="sub-container chat-feed">
+        <div class="chat-box" id="chat-box-msgs"></div>
+        <img src="/media/dirtman.png" alt="dirt man" id="dirt-man" width=300px heigth=800px>
+        <img src="/media/rustman.png" alt="rust man" id="rust-man" width=300px heigth=800px>
+      </div>
+    </div>
+    <!-- <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form> -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
